@@ -1,0 +1,6 @@
+{
+  "short_name": "React App",
+  "name": "Random Quote Machine",
+  "start_url": ".",
+  "display": "standalone"
+}
