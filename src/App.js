@@ -47,21 +47,20 @@ const App = () => {
   document.body.style.color = textColors[randomColors];
 
   return (
-    <div className="d-flex justify-content-center m-3 mt-5">
-      <div
-        className="bg-white text-center rounded-3 d-flex flex-column"
-        id="quote-box"
-      >
+    <div className="d-flex flex-column align-items-center justify-content-center m-3 mt-5">
+      <div className="quote-box bg-white text-center rounded-3 d-flex flex-column">
         <div className="d-flex p-3">
           <i className="bi bi-quote fs-1"></i>
-          <p className="fs-5 p-3" id="text">
-            {quotes[randomQuotes].quotation}
-          </p>
+          <div className="d-flex flex-column justify-content-center fs-5 p-3 mx-auto">
+            {quotes[randomQuotes].quotation ? (
+              <div>{quotes[randomQuotes].quotation}</div>
+            ) : (
+              <div className="spinner-border" role="status"></div>
+            )}
+          </div>
         </div>
 
-        <p className="fs-6" id="author">
-          {quotes[randomQuotes].author}
-        </p>
+        <p className="fs-6">{quotes[randomQuotes].author}</p>
 
         <div className="d-flex justify-content-around align-items-center p-3">
           <div>
@@ -75,7 +74,6 @@ const App = () => {
 
             <a
               className="change-color"
-              id="tweet-quote"
               href={twitter}
               target="_blank"
               title="Tweet this quote!"
@@ -84,15 +82,16 @@ const App = () => {
             </a>
           </div>
 
-          <button
-            className={buttonClasses[randomColors]}
-            id="new-quote"
-            onClick={changeQuote}
-          >
+          <button className={buttonClasses[randomColors]} onClick={changeQuote}>
             Change Quote
           </button>
         </div>
       </div>
+      <footer className="text-white my-5">
+        <a href="https://github.com/Cl84Dev" target="_blank">
+          @Cl84Dev
+        </a>
+      </footer>
     </div>
   );
 };

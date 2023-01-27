@@ -4,13 +4,14 @@ body {
   transition: 0.4s;
 }
 
-#quote-box {
+.quote-box {
   max-width: 600px;
   height: auto;
 }
 
 a {
   color: unset;
+  text-decoration: none;
 }
 
 a:hover {
