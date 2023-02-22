@@ -30,8 +30,8 @@ const App = () => {
     setRandomQuotes(() => Math.floor(Math.random() * quotes.length));
   };
 
-  const twitter = `https://twitter.com/intent/tweet?hashtags=quotes&text=%22${quotes[randomQuotes].quotation}%22%0A${quotes[randomQuotes].author}`;
-  const whatsapp = `https://api.whatsapp.com/send?text=%22${quotes[randomQuotes].quotation}%22%0A${quotes[randomQuotes].author}`;
+  const twitter = `https://twitter.com/intent/tweet?hashtags=quotes&text=%22${quotes[randomQuotes].quote}%22%0A${quotes[randomQuotes].author}`;
+  const whatsapp = `https://api.whatsapp.com/send?text=%22${quotes[randomQuotes].quote}%22%0A${quotes[randomQuotes].author}`;
 
   const textColors = ["#0d6efd", "#6c757d", "#198754", "#dc3545", "#212529"];
 
@@ -52,8 +52,8 @@ const App = () => {
         <div className="d-flex p-3">
           <i className="bi bi-quote fs-1"></i>
           <div className="d-flex flex-column justify-content-center fs-5 p-3 mx-auto">
-            {quotes[randomQuotes].quotation ? (
-              <div>{quotes[randomQuotes].quotation}</div>
+            {quotes[randomQuotes].quote ? (
+              <div>{quotes[randomQuotes].quote}</div>
             ) : (
               <div className="spinner-border" role="status"></div>
             )}
