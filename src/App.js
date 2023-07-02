@@ -41,7 +41,7 @@ const App = () => {
 
   return (
     <div className="d-flex flex-column align-items-center justify-content-center m-3 mt-5">
-      {quotes && randomQuotes ? (
+      {quotes ? (
         <div className="quote-box bg-white text-center rounded-3 d-flex flex-column">
           <div className="d-flex p-3">
             <i className="bi bi-quote fs-1"></i>
